@@ -1,0 +1,31 @@
+<!-- include header file -->
+<%- include("partials/header.ejs") %>
+<body>
+    <div class="screen" style="height: 40px; border: 1px solid black; display: flex; justify-content: center; align-items: center; margin: 20px;">Screen</div>
+    <div style="height: 300px;">    
+        <div class="text-center" name="movie"><p><%= movie%></p></div>
+    </div>
+    <div class="sits_content" style="border: 1px solid black ; display: flex; justify-content: space-evenly;">
+
+        <!-- A Col -->
+        <div class="sits_col" style=" width: 200px; display: flex; justify-content: center;">
+            <a href="./add_sit">
+            <button class="sits" id="sits" style="border-radius: 50px; margin: 10px;">
+                <div><h3>A1</h3></div>
+            </button></a>
+            
+            <a href="./add_sit_a2">
+            <button class="sits" id="sits" style="font-size: 32px; border-radius: 50px; margin: 10px;"><h3>A2</h3></button></a>
+        </div>
+
+        <!-- B Col -->
+        <div class="sits_col" style=" width: 200px; display: flex; justify-content: center;">
+            <a href="./add_sit_a3">
+                <button class="sits" id="sits" style="font-size: 32px; border-radius: 50px; margin: 10px;"><h3>B1</h3></button></a>
+            <a href="./add_sit_a4">
+                <button class="sits" id="sits" style="font-size: 32px; border-radius: 50px; margin: 10px;"><h3>B2</h3></button></a>
+        </div>
+    </div>
+</body>
+<!-- include footer file -->
+<%- include("partials/footer.ejs") %>

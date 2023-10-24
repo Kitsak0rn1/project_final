@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Get Bootstrap Css (CDN)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+
+    <!-- include css file -->
+    <!-- include title Tag -->
+    <title><%= title %></title> 
+    
+</head>
+<body>
+    <div style="display: flex; justify-content: center;">
+        <div class="card" style="width: 530px; margin-top: 30px;">
+            <div class="card-header" style="background-color: #ECE9DF;" >Ticket</div>
+            <div class="card-body" style="display: flex;" >
+                <!-- add user booking form -->
+                <div style="display: flex; flex-direction: column;">
+                    <div style="margin-bottom: 10px;">
+                        <img src="<%= picture_movie  %>" heigh="250px" width="200px" alt="รูปภาพ">
+                    </div>
+                    <input type="submit" class="btn btn-info" value="Print" onclick="ButtonClick_Print()">
+                </div>
+                <div style="margin: 10px 0px 0px 20px;">
+                    <p><b>Booking by :</b> <%= name %></p> 
+                    <p><b>Movie :</b> <%= movie %></p>
+                    <p><b>Show time :</b> <%= ShowTime %></p>
+                    <p><b>Theater :</b> <%= Theater %></p>
+                    <p><b>Seat :</b> <%= seat %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function ButtonClick_Print() {
+            window.print();
+        }
+    </script>
+</body>
+<!-- include footer file -->
+<%- include("partials/footer.ejs") %>

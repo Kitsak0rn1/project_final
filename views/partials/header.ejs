@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Get Bootstrap Css (CDN)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+
+    <!-- include css file -->
+    <!-- include title Tag -->
+    <title><%= title %></title> 
+    
+    <style>
+      .sits {
+        background-color: rgb(31, 228, 54);
+      }
+      .movie-block {
+    display: flex;
+    justify-content: space-evenly;
+
+    margin: 10px;
+    padding: 10px;
+
+    /* border: 1px solid black; */
+    border-radius: 10px;;
+    width: 750px;
+}
+.movie-img {
+    border-radius: 10px;
+    /* border: 1px solid black;  */
+    width: 250px; 
+    height: 330px;
+}
+.movie-time {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    
+    padding: 5px;
+    border-radius: 10px;
+    /* border: 1px solid black;     */
+    width: 450px; 
+    /*height: 230px;*/
+}
+    </style>
+</head>
+
+<!-- NavBar -->
+<div class="container">
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+      </ul>
+    </header>
+</div>
+<!-- End NavBar -->

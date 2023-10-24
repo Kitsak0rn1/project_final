@@ -1,0 +1,90 @@
+<!-- include header file -->
+<%- include("partials/header.ejs") %>
+
+<body>
+    <!-- Get Bootstrap Js (CDN)-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <!-- Poster -->
+    <div class="container col-xxl-8 px-4 py-5" style="background-color: #ECE9DF; border-radius: 10px;" >
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img width="520" height="355" src="https://img1.hotstarext.com/image/upload/f_auto,t_hcdl/sources/r1/cms/prod/4294/674294-h" frameborder="0" allowfullscreen style="border-radius: 10px;"></img>
+        </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Iron Man 3 </h1>
+            <p class="lead" style="text-indent: 2.5em;">When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" id="buttonA" style="margin: 5px;">Buy Ticket</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End Poster -->
+
+    <!-- movie Content -->
+    <div class="container px-4 py-5" id="custom-cards">
+        <h2 class="pb-2 border-bottom">Movie Lists</h2>
+
+        <!-- movie list -->
+        <div class="movie_list" style="display: flex; flex-direction: column; align-items: center; padding: 10px;">
+            
+            <!-- movie 1 -->
+            <div class="movie-block">
+                <div class="movie-img"><img src="https://m.media-amazon.com/images/I/81ai6zx6eXL._AC_SL1304_.jpg" alt="รูปภาพตัวอย่าง" width="240" height="350" style="border-radius: 10px;"></div>
+                <div class="movie-time">
+                    <div class="movie-name" style="margin: 20px 0px 0px 10px;"><h1>Avengers Endgame</h1></div>
+                    <p style="margin: 0px 0px 20px 10px; text-indent: 2.5em;"> The fourth installment in the Avengers saga is the culmination of 22 interconnected Marvel films and the climax of an epic journey. The world's greatest heroes will finally understand just how fragile our reality is--and the sacrifices that must be made to uphold it--in a story of friendship, teamwork and setting aside differences to overcome an impossible obstacle.</p>
+                    <p style="margin: 0px 0px 0px 10px;">Show time at 10:30</p>
+                    <p style="margin: 0px 0px 5px 10px;">Theater 1</p>
+
+
+                    <div class="time-btn" style="display: flex; justify-content: center;">
+                        <a href="./Theater1" target="_blank">
+                            <button style="margin: 7px; border-radius: 30px; width: 423px; background-color: #ECE9DF; border: 0px;">Ticket</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- End movie 1 -->
+            <hr>
+            <!-- movie 2 -->
+            <div class="movie-block">
+                <div class="movie-img"><img src="https://cdn.kobo.com/book-images/39f5758d-be8e-4dfd-8395-52092dfb6f49/353/569/90/False/marvel-s-iron-man-3.jpg" alt="รูปภาพตัวอย่าง" width="240" height="350" style="border-radius: 10px;"></div>
+                <div class="movie-time">
+                    <div class="movie-name" style="margin: 20px 0px 0px 10px;"><h1>Iron Man 3</h1></div>
+                    <p style="margin: 0px 0px 20px 10px; text-indent: 2.5em;">When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution. The studio that brought you Marvel’s The Avengers unleashes the best Iron Man adventure yet with this must-own, global phenomenon starring Robert Downey Jr. and Gwyneth Paltrow. When Tony Stark/Iron Man finds his entire world reduced to rubble, he must use all his ingenuity to survive, destroy his enemy and somehow protect those he loves. But a soul-searching question haunts him: Does the man make the suit… or does the suit make the man?</p>
+                    <p style="margin: 0px 0px 0px 10px;">Show time at 13:50</p>
+                    <p style="margin: 0px 0px 5px 10px;">Theater 2</p>
+
+                    <div class="time-btn" style="display: flex; justify-content: center;">
+                        <a href="./Theater2" target="_blank">
+                            <button id="buttonB" style="margin: 7px; border-radius: 30px; width: 423px; background-color: #ECE9DF; border: 0px;">Ticket</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- End movie 2 -->
+        </div>
+    </div>    
+    <script>
+        // รับองค์ประกอบของปุ่ม a และ b
+        const buttonA = document.getElementById("buttonA");
+        const buttonB = document.getElementById("buttonB");
+    
+        // เพิ่มการฟังก์ชันเมื่อปุ่ม a ถูกคลิก
+        buttonA.addEventListener("click", () => {
+            // หาตำแหน่งของปุ่ม b ในหน้าเว็บ
+            const buttonBPosition = buttonB.getBoundingClientRect();
+    
+            // เลื่อนหน้าเว็บไปยังตำแหน่งของปุ่ม b
+            window.scrollTo({
+                top: window.scrollY + buttonBPosition.top, // ใช้ window.scrollY เพื่อคำนวณตำแหน่งและเลื่อน
+                behavior: "smooth" // เพื่อให้มันมีอนิเมชัน (scroll smoothly)
+            });
+        });
+    </script>
+</body>
+
+<!-- include footer file -->
+<%- include("partials/footer.ejs") %>
